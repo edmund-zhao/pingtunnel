@@ -36,3 +36,8 @@ jobs:
             windows_amd64.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: |
+          windows_amd64.exe
