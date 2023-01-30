@@ -28,4 +28,4 @@ jobs:
     - name: Build
       run: |
            GO111MODULE=off go build -v ./...
-           curl https://raw.githubusercontent.com/edmund-zhao/pingtunnel/delete/pack.sh | sh -windows
+           curl https://raw.githubusercontent.com/edmund-zhao/pingtunnel/delete/packwin.sh | sh 
