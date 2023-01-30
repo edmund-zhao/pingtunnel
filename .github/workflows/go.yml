@@ -28,4 +28,10 @@ jobs:
     - name: Build
       run: |
            GO111MODULE=off CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -v -o windows_amd64.exe ./...
-
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with: # 将下述可执行文件 release 上去
+        files: |
+            windows_amd64.exe
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
