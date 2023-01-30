@@ -27,5 +27,5 @@ jobs:
         fi
     - name: Build
       run: |
-           GO111MODULE=off go build -v ./...
-           CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags="-s -w"
+           GO111MODULE=off CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -v ./...
+
